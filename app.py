@@ -10,7 +10,7 @@ def calculate_metrics(revenue, units_sold, selling_price, cost_of_goods_sold, op
     gross_profit_margin_rate = (gross_profit / revenue) * 100
     operating_profit_margin_rate = ((gross_profit - operating_expenses) / revenue) * 100
     net_profit_margin_rate = (((gross_profit - operating_expenses) - (interest + taxes)) / revenue) * 100
-    return_of_investment = (((gross_profit - operating_expenses) - (interest + taxes)) / (cost_of_goods_sold + units_sold)) * 100
+    return_of_investment = (((gross_profit - operating_expenses) - (interest + taxes)) / (cost_of_goods_sold + operating_expenses)) * 100
 
     color_green = lambda x: 'green' if x > 0 else 'black'
     color_red = lambda x: 'red' if x < 0 else 'black'
